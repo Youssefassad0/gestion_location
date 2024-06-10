@@ -212,7 +212,7 @@ function Rent() {
                   fontSize="2xl"
                   fontWeight={["bold", "extrabold"]}
                 >
-                  ${totalPrice.toFixed(2)}
+                  DH {totalPrice.toFixed(2)}
                 </Text>
                 <Text ml={2} fontSize="xl" fontWeight="medium" color="gray.500">
                   USD
