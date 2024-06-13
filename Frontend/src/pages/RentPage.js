@@ -43,7 +43,7 @@ function Rent() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8001/api/cars/${params.id}`)
+      .get(`http://127.0.0.1:8000/api/cars/${params.id}`)
       .then((response) => {
         setCar(response.data.data[0]);
         setLoading(false);
@@ -107,7 +107,7 @@ function Rent() {
       console.log(rent);
       if (rentalDate.current.value != "" && returnDate.current.value != "") {
         axios
-          .post("http://127.0.0.1:8001/api/rents", rent)
+          .post("http://127.0.0.1:8000/api/rents", rent)
           .then((response) => {
             showToast(
               toast,
@@ -212,10 +212,10 @@ function Rent() {
                   fontSize="2xl"
                   fontWeight={["bold", "extrabold"]}
                 >
-                  DH {totalPrice.toFixed(2)}
+                 {totalPrice.toFixed(2)}
                 </Text>
                 <Text ml={2} fontSize="xl" fontWeight="medium" color="gray.500">
-                  USD
+                  DH
                 </Text>
               </HStack>
               <Button onClick={rentACar} w={"full"}>
